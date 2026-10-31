@@ -1,0 +1,19 @@
+{
+  "name": "actionloop-contracts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ActionLoop Audit Registry smart contract for MST Blockchain",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:local": "hardhat run scripts/deploy.js --network hardhat",
+    "deploy:testnet": "hardhat run scripts/deploy.js --network mstTestnet",
+    "deploy:mainnet": "hardhat run scripts/deploy.js --network mstMainnet",
+    "export-abi": "node scripts/export-abi.js"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.6.1",
+    "hardhat": "^2.29.1"
+  }
+}

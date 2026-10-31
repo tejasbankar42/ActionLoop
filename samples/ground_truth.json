@@ -1,0 +1,79 @@
+[
+  {
+    "file": "A_invoice_pune_techsupplies.pdf",
+    "scenario": "A - Successful processing",
+    "truth": {
+      "invoice_number": "INV-2026-0918",
+      "vendor_name": "Pune TechSupplies Pvt. Ltd.",
+      "vendor_gstin": "27AABCP1234Q1Z5",
+      "invoice_date": "2026-10-18",
+      "due_date": "2026-11-17",
+      "total_amount": "48560.00",
+      "currency": "INR",
+      "po_number": "PO-NMIET-2026-311"
+    }
+  },
+  {
+    "file": "B_admission_form_missing_field.pdf",
+    "scenario": "B - Missing information",
+    "truth": {
+      "applicant_name": "Riya Sanjay Kulkarni",
+      "date_of_birth": "2008-03-14",
+      "email": "riya.kulkarni08@example.com",
+      "course_applied": "B.E. Computer Engineering",
+      "previous_marks_percent": "86.40",
+      "guardian_name": null
+    }
+  },
+  {
+    "file": "C_invoice_duplicate.pdf",
+    "scenario": "C - Duplicate detection",
+    "truth": {
+      "invoice_number": "INV-SGO-2026-0412",
+      "vendor_name": "Shree Ganesh Office Supplies",
+      "vendor_gstin": "27AAKFS5521M1Z2",
+      "invoice_date": "2026-09-02",
+      "total_amount": "18240.00"
+    }
+  },
+  {
+    "file": "D_fee_receipt_unclear_amount.pdf",
+    "scenario": "D - Low confidence",
+    "truth": {
+      "receipt_number": "FR-2026-11873",
+      "student_name": "Omkar Deshmukh",
+      "student_id": "NMIET-CE-2024-118",
+      "amount_paid": null,
+      "payment_date": null,
+      "payment_mode": "UPI"
+    }
+  },
+  {
+    "file": "E_complaint_email_hostel_leak.pdf",
+    "scenario": "E - Complaint processing",
+    "truth": {
+      "sender_email": "aarav.patil.cs22@example.com",
+      "sender_name": "Aarav Patil",
+      "subject": "Water leakage and exposed wiring in Hostel Block C",
+      "received_date": "2026-10-29",
+      "complaint_category": "Facilities & Maintenance",
+      "urgency": "high"
+    }
+  },
+  {
+    "file": "F_clinic_registration.pdf",
+    "scenario": "Extra - Clinic registration",
+    "truth": {
+      "patient_name": "Meera Joshi",
+      "date_of_birth": "1991-07-22",
+      "phone": "+91 99702 18834",
+      "insurance_id": "STAR-HLT-883421",
+      "preferred_doctor": "Dr. A. Bhosale"
+    }
+  },
+  {
+    "file": "G_invoice_photo.png",
+    "scenario": "Image upload (needs vision LLM)",
+    "truth": {}
+  }
+]

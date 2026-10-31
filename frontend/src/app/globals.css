@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --navy: #101828;
+  --navy-2: #182438;
+  --teal: #16b8a6;
+  --teal-ink: #0e8f81;
+  --slate: #98a2b3;
+
+  --canvas: #f7f8fa;
+  --surface: #ffffff;
+  --surface-2: #f2f4f7;
+  --border: #e4e7ec;
+  --ink: #101828;
+  --ink-2: #475467;
+  --ink-3: #98a2b3;
+
+  --ok: #12b76a;
+  --warn: #f79009;
+  --bad: #f04438;
+
+  --agent-extract: #16b8a6;
+  --agent-validate: #6172f3;
+  --agent-plan: #9e77ed;
+  --agent-human: #0ba5ec;
+  --agent-exec: #475467;
+  --agent-audit: #182438;
+}
+
+.dark {
+  --canvas: #0b1220;
+  --surface: #111a2b;
+  --surface-2: #17223a;
+  --border: #233149;
+  --ink: #f2f4f7;
+  --ink-2: #b4bfd0;
+  --ink-3: #7d8aa1;
+  --agent-audit: #8ea0bd;
+  --agent-exec: #98a2b3;
+}
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-navy-2: var(--navy-2);
+  --color-teal: var(--teal);
+  --color-teal-ink: var(--teal-ink);
+  --color-slate: var(--slate);
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--border);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-ok: var(--ok);
+  --color-warn: var(--warn);
+  --color-bad: var(--bad);
+  --color-a-extract: var(--agent-extract);
+  --color-a-validate: var(--agent-validate);
+  --color-a-plan: var(--agent-plan);
+  --color-a-human: var(--agent-human);
+  --color-a-exec: var(--agent-exec);
+  --color-a-audit: var(--agent-audit);
+  --font-sans: "Plus Jakarta Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
+  --radius-card: 14px;
+}
+
+html,
+body {
+  background: var(--canvas);
+  color: var(--ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--teal) 30%, transparent);
+}
+
+.hash {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: -0.01em;
+}
+
+.grid-paper {
+  background-image: linear-gradient(to right, color-mix(in srgb, var(--slate) 14%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--slate) 14%, transparent) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+.flow-dash {
+  stroke-dasharray: 6 6;
+  animation: dash 0.9s linear infinite;
+}
+
+/* React Flow theming */
+.react-flow__attribution {
+  display: none;
+}
+.react-flow__controls button {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--ink);
+}
